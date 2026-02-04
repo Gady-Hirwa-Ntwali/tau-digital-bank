@@ -1,4 +1,4 @@
-name: first work flow unit test
+name: first workflow unit test
 
 on:
   push:
@@ -10,7 +10,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-       - name: Checkout
-         uses: actions/checkout@v6.0.2
-       - name: run unit test
-         run: mvn test
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run unit tests
+        run: mvn test
